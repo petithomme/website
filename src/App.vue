@@ -31,7 +31,15 @@ export default {
     font-family: "Roboto";
     font-weight: 800;
     color: teal;
+  }
 
+  #router {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    font-family: "Roboto";
+    font-weight: 800;
+    color: slategrey;
   }
 
   #menu {
@@ -48,7 +56,32 @@ export default {
     background: linear-gradient(#dddddd, #ffffff);
     height: 0.5rem;
   }
+
   #router {
     margin-top: 0.5rem;
+  }
+
+  .subMenuContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    cursor:pointer;
+  }
+
+  .submenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6rem;
+    border: slategrey;
+    border-style: solid;
+    border-width: thin;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
   }
 </style>
