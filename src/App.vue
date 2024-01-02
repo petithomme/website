@@ -76,9 +76,7 @@ export default {
     align-items: center;
     justify-content: center;
     width: 6rem;
-    border: slategrey;
-    border-style: solid;
-    border-width: thin;
+    border: thin solid slategrey;
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;
     margin-left: 0.5rem;
