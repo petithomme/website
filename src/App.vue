@@ -1,10 +1,10 @@
 <template>
   <div id="nav">
-    <span id="menu"><router-link to="/">Home</router-link></span>
-    <span class="menu"><router-link to="/professionals">Professionals</router-link></span>
-    <span class="menu"><router-link to="/projects">Projects</router-link></span>
-    <span class="menu"><router-link to="/certifications">Certifications</router-link></span>
-    <span class="menu"><router-link to="/contact">Contact</router-link></span>
+    <VaChip flat id="menu"><router-link to="/">Home</router-link></VaChip>
+    <VaChip flat><router-link to="/professionals">Professionals</router-link></VaChip>
+    <VaChip flat><router-link to="/projects">Projects</router-link></VaChip>
+    <VaChip flat><router-link to="/certifications">Certifications</router-link></VaChip>
+    <VaChip flat><router-link to="/contact">Contact</router-link></VaChip>
   </div>
   <div id="separator"></div>
   <div id="router">
@@ -47,11 +47,6 @@ export default {
 
   #menu {
     margin-left: auto;
-    margin-right: 2rem;
-  }
-
-  .menu {
-    margin-right: 2rem;
   }
 
   #separator {
