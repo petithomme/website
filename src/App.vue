@@ -24,6 +24,9 @@ export default {
 
 <style>
   @import url('https://fonts.googleapis.com/css?family=Roboto');
+  @import"https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;1,700&display=swap";
+  @import"https://fonts.googleapis.com/icon?family=Material+Icons";
+
   #nav {
     margin-top: 1rem;
     margin-bottom: 1rem;
