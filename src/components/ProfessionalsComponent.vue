@@ -1,14 +1,19 @@
 <template>
-    <div class="subMenuContainer">
-        <VaButton v-for="i in [0,1,2,3,4]" v-bind:key="i"
-                  class="submenu"
-                  preset="secondary"
-                  border-color="primary"
-                  @click="clickOn(i)">
-            {{ companies[i]}}
-        </VaButton>
-    </div>
+    <div class="presentation">
+        <div class="subMenuContainer">
+            <VaButton v-for="i in [0,1,2,3,4]" v-bind:key="i"
+                      class="submenu"
+                      preset="secondary"
+                      :border-color="getColor(i)"
+                      @click="clickOn(i)">
+                {{ companies[i]}}
+            </VaButton>
+        </div>
 
+        <div class="displayWorks" v-if="tab === 0">
+            svsdvssfsfds
+        </div>
+    </div>
 </template>
 
 <script>
@@ -16,11 +21,14 @@
         name: "ProfessionalsComponent",
         methods: {
              clickOn(value) {
-                 console.log(value)
+                console.log(value)
                 this.tab = value
+            },
+            getColor(value) {
+                return this.tab === value ? "danger" : "info"
             }
-        },
 
+        },
         data() {
             return {
                 companies: ['FDJ','Kobojo','Megazebra', 'Everreal', 'Timify'],
@@ -32,4 +40,9 @@
 
 <style scoped>
 
+    .displayWorks {
+        margin-top: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
 </style>

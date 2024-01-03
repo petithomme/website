@@ -80,4 +80,11 @@ export default {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
   }
+
+  .presentation {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
 </style>
