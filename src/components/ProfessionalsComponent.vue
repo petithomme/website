@@ -3,22 +3,24 @@
         <div class="subMenuContainer">
             <VaButton v-for="i in [0,1,2,3,4]" v-bind:key="i"
                       class="submenu"
-                      preset="secondary"
+                      :color="getColor(i)"
                       :border-color="getColor(i)"
                       @click="clickOn(i)">
                 {{ companies[i]}}
             </VaButton>
         </div>
 
-        <div class="displayWorks" v-if="tab === 0">
-            svsdvssfsfds
+        <div class="displayWorks" v-if="tab === 3">
+            <WorksComponent images="5" :path="companies[tab]"/>
         </div>
     </div>
 </template>
 
 <script>
+    import WorksComponent from "@/components/subComponents/WorksComponent";
     export default {
         name: "ProfessionalsComponent",
+        components: {WorksComponent},
         methods: {
              clickOn(value) {
                 console.log(value)
@@ -32,7 +34,7 @@
         data() {
             return {
                 companies: ['FDJ','Kobojo','Megazebra', 'Everreal', 'Timify'],
-                tab: 0
+                tab: 4
             }
         }
     }
