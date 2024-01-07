@@ -17,6 +17,7 @@
 
 <script>
 
+    import 'vue3-carousel/dist/carousel.css'
     import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
     export default {
@@ -43,6 +44,10 @@
 
 <style scoped>
 
+    .carousel__slide {
+        padding: 100px;
+    }
+
     .carousel__item {
         min-height: 200px;
         width: 50%;
@@ -63,5 +68,6 @@
     .carousel__next {
         box-sizing: content-box;
         border: 5px solid white;
+        padding-right: 100px;
     }
 </style>
