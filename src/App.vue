@@ -1,10 +1,10 @@
 <template>
   <div id="nav">
-    <VaChip flat id="menu"><router-link to="/">Home</router-link></VaChip>
-    <VaChip flat><router-link to="/professionals">Professionals</router-link></VaChip>
-    <VaChip flat><router-link to="/projects">Projects</router-link></VaChip>
-    <VaChip flat><router-link to="/certifications">Certifications</router-link></VaChip>
-    <VaChip flat><router-link to="/contact">Contact</router-link></VaChip>
+    <b-link id="menu" class="link"><router-link to="/">Home</router-link></b-link>
+    <b-link class="link"><router-link to="/professionals">Professionals</router-link></b-link>
+    <b-link class="link"><router-link to="/projects">Projects</router-link></b-link>
+    <b-link class="link"><router-link to="/certifications">Certifications</router-link></b-link>
+    <b-link class="link"><router-link to="/contact">Contact</router-link></b-link>
   </div>
   <div id="separator"></div>
   <div id="router">
@@ -14,18 +14,22 @@
 </template>
 
 <script>
-export default {
-  name: 'App',
-  components: {
 
+  export default {
+    name: 'App',
+    components: {
+    }
   }
-}
 </script>
 
 <style>
   @import url('https://fonts.googleapis.com/css?family=Roboto');
   @import"https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;1,700&display=swap";
   @import"https://fonts.googleapis.com/icon?family=Material+Icons";
+
+  .link {
+    margin-right: 1rem;
+  }
 
   #nav {
     margin-top: 1rem;

@@ -1,17 +1,16 @@
 <template>
     <div class="presentation">
         <div class="subMenuContainer">
-            <VaButton v-for="i in [0,1,2,3,4]" v-bind:key="i"
+            <b-button v-for="i in [0,1,2,3,4]" v-bind:key="i"
                       class="submenu"
-                      :color="getColor(i)"
-                      :border-color="getColor(i)"
+                      variant="outline-primary"
                       @click="clickOn(i)">
                 {{ companies[i]}}
-            </VaButton>
+            </b-button>
         </div>
 
         <div class="displayWorks" v-if="tab === 3">
-            <WorksComponent images="5" :path="companies[tab]"/>
+            <WorksComponent :path="companies[tab]" />
         </div>
     </div>
 </template>
@@ -26,9 +25,6 @@
                 console.log(value)
                 this.tab = value
             },
-            getColor(value) {
-                return this.tab === value ? "danger" : "info"
-            }
 
         },
         data() {
