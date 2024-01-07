@@ -9,6 +9,7 @@
             </b-button>
         </div>
 
+        <br>
         <div class="displayWorks" v-if="tab === 3">
             <WorksComponent :path="companies[tab]" />
         </div>
@@ -40,7 +41,5 @@
 
     .displayWorks {
         margin-top: 1rem;
-        margin-left: auto;
-        margin-right: auto;
     }
 </style>

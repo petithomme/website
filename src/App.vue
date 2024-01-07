@@ -24,8 +24,9 @@
 
 <style>
   @import url('https://fonts.googleapis.com/css?family=Roboto');
-  @import"https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;1,700&display=swap";
-  @import"https://fonts.googleapis.com/icon?family=Material+Icons";
+  @import "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;1,700&display=swap";
+  @import "https://fonts.googleapis.com/icon?family=Material+Icons";
+  @import "vue3-carousel/dist/carousel.css";
 
   .link {
     margin-right: 1rem;
