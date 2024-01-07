@@ -1,8 +1,8 @@
 <template>
 
     <carousel v-bind="settings">
-        <slide v-for="i in 6" :key="i">
-           <img :src="`http://william-libert.com/public/everreal/${i}.png`"
+        <slide v-for="i in 4" :key="i">
+           <img :src="require(`@/assets/${this.path.toLowerCase()}/${i}.png`)"
                 alt="" class="carousel__item"/>
         </slide>
 
