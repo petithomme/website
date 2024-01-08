@@ -1,16 +1,26 @@
 <template>
 
-    <carousel v-bind="settings">
-        <slide v-for="i in 4" :key="i">
-           <img :src="require(`@/assets/${this.path.toLowerCase()}/${i}.png`)"
-                alt="" class="carousel__item"/>
-        </slide>
+    <div>
+        <p class="description"> EverReal is a digital real estate rental and sales software. It simplifies the processes from marketing and selecting interested parties to handover, for better, more successful work. </p>
 
-        <template #addons>
-            <pagination />
-        </template>
-    </carousel>
+        <carousel v-bind="settings">
+            <slide v-for="i in 4" :key="i">
+               <img :src="require(`@/assets/${this.path.toLowerCase()}/${i}.png`)"
+                    alt="" class="carousel__item"/>
+            </slide>
 
+            <template #addons>
+                <pagination />
+            </template>
+        </carousel>
+
+
+        <p class="description">
+            <H2>Fullstack developer </H2>
+            <H5>Backend : NodeJs/ Express / Typescript - Jest - PostgreSQL</H5>
+            <H5>Frontend : React / Redux / Typescript - Jest - Storybook - Mui </H5>
+        </p>
+    </div>
 
 </template>
 
@@ -27,7 +37,7 @@
             Pagination
         },
         props: [
-           "path"
+           "path", "description"
         ],
         data() {
             return {
@@ -42,6 +52,14 @@
 
 <style scoped>
 
+    .description {
+        width: 60%;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 1rem;
+        text-align: center;
+    }
+
     .carousel__item {
         min-height: 200px;
         width: 50%;
@@ -55,7 +73,8 @@
     }
 
     .carousel__slide {
-        padding: 10px;
+        padding: 2rem;
+        margin-top: -2rem;
     }
 
 </style>
