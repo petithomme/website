@@ -1,10 +1,10 @@
 <template>
 
     <div>
-        <p class="description"> EverReal is a digital real estate rental and sales software. It simplifies the processes from marketing and selecting interested parties to handover, for better, more successful work. </p>
+        <p class="description"> {{ this.description }} </p>
 
         <carousel v-bind="settings">
-            <slide v-for="i in 4" :key="i">
+            <slide v-for="i in this.images" :key="i">
                <img :src="require(`@/assets/${this.path.toLowerCase()}/${i}.png`)"
                     alt="" class="carousel__item"/>
             </slide>
@@ -37,7 +37,7 @@
             Pagination
         },
         props: [
-           "path", "description"
+           "path", "description", "images"
         ],
         data() {
             return {
