@@ -77,7 +77,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 6rem;
+    width: 7rem;
     border: thin solid slategrey;
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;

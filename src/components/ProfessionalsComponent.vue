@@ -10,7 +10,7 @@
         </div>
 
         <br>
-        <div class="displayWorks" v-if="tab === 3">
+        <div class="displayWorks">
             <WorksComponent :path="companies[tab]" :description="descriptions[companies[tab]]" :images="images[companies[tab]]"/>
         </div>
     </div>
@@ -31,6 +31,7 @@
         data() {
             return {
                 images: {
+                    Kobojo: 5,
                     Everreal: 4
                 },
                 companies: ['Lotsys','Kobojo','Megazebra', 'Everreal', 'Timify'],
@@ -39,7 +40,7 @@
                     Kobojo: 'Kobojo was a French video game developer and distribution company based in Paris. It was acquired by Celsius online in 2017',
                     Megazebra: 'MegaZebra is a game development company located in Munich that develops free-to-play games for social networks like Facebook and mobile devices, such as smartphones and tablets',
                     Everreal: 'EverReal is a digital real estate rental and sales software. It simplifies the processes from marketing and selecting interested parties to handover, for better, more successful work.',
-                    Timify: 'Scheduling solutions for teams and enterprises\n Convenient and instant appointment booking for your customers. Powerful and efficient scheduling for your entire business.'
+                    Timify: 'TIMIFY is a global leader in scheduling and resource management software-as-a-service (Saas). It is known for its sophisticated, secure, and customisable enterprise-focused technology.'
                 },
                 tab: 4
             }
