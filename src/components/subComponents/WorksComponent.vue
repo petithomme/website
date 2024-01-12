@@ -3,7 +3,8 @@
     <div>
         <p class="description"> {{ this.description }} </p>
 
-        <carousel v-bind="settings">
+        <p class="description" v-if="subDescription">Game : {{ this.getSubdescription }} </p>
+        <carousel v-bind="settings"  @slide-start="handleSlideStart">
             <slide v-for="i in this.images" :key="i">
                <img :src="require(`@/assets/${this.path.toLowerCase()}/${i}.png`)"
                     alt="" class="carousel__item"/>
@@ -37,14 +38,28 @@
             Pagination
         },
         props: [
-           "path", "description", "images"
+           "path", "description", "images", "subDescription"
         ],
+        methods: {
+            handleSlideStart(data) {
+                this.currentSlideIndex = data.slidingToIndex
+                console.log('slide-start', data)
+            },
+        },
+        computed: {
+            getSubdescription() {
+                console.log('hu : ', this.subDescription[this.value])
+                return this.subDescription[this.currentSlideIndex]
+            }
+        },
         data() {
             return {
                 settings: {
-                    itemsToShow: 1
+                    itemsToShow: 1,
+                    background:"#ababab"
                 },
                 value: 0,
+                currentSlideIndex: 0
             }
         }
     }
@@ -63,7 +78,7 @@
     .carousel__item {
         min-height: 200px;
         width: 50%;
-        background-color: var(--vc-clr-primary);
+        background-color: var(--vc-clr-white);
         color: var(--vc-clr-white);
         font-size: 20px;
         border-radius: 8px;
