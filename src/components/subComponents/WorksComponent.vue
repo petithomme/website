@@ -1,8 +1,7 @@
 <template>
 
     <div>
-        <p class="description"> {{ this.description }} </p>
-
+        <p class="description"> {{ this.description }} <a :href="this.link">{{ this.link }}</a>  </p>
         <p class="description" v-if="subDescription">Game : {{ this.getSubdescription }} </p>
         <carousel v-bind="settings"  @slide-start="handleSlideStart">
             <slide v-for="i in this.images" :key="i">
@@ -38,17 +37,15 @@
             Pagination
         },
         props: [
-           "path", "description", "images", "subDescription"
+           "path", "description", "images", "subDescription", "link"
         ],
         methods: {
             handleSlideStart(data) {
                 this.currentSlideIndex = data.slidingToIndex
-                console.log('slide-start', data)
             },
         },
         computed: {
             getSubdescription() {
-                console.log('hu : ', this.subDescription[this.value])
                 return this.subDescription[this.currentSlideIndex]
             }
         },

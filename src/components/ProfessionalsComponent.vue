@@ -11,7 +11,12 @@
 
         <br>
         <div class="displayWorks">
-            <WorksComponent :path="companies[tab]" :description="descriptions[companies[tab]]" :sub-description="subDescriptions[companies[tab]]" :images="images[companies[tab]]"/>
+            <WorksComponent
+                    :path="companies[tab]"
+                    :description="descriptions[companies[tab]]"
+                    :sub-description="subDescriptions[companies[tab]]"
+                    :images="images[companies[tab]]"
+                    :link="links[companies[tab]]"/>
         </div>
     </div>
 </template>
@@ -31,19 +36,26 @@
         data() {
             return {
                 images: {
-                    Kobojo: 6,
+                    Kobojo: 8,
                     Everreal: 4
                 },
                 companies: ['Lotsys','Kobojo','Megazebra', 'Everreal', 'Timify'],
                 descriptions: {
                     Lotsys: 'Lotsys was the innovation, technology and services hub of the Group FDJ. Its mission was to provide responsive and high-performing services.',
-                    Kobojo: 'Kobojo was a French video game developer and distribution company based in Paris. It was acquired by Celsius online in 2017',
-                    Megazebra: 'MegaZebra is a game development company located in Munich that develops free-to-play games for social networks like Facebook and mobile devices, such as smartphones and tablets',
+                    Kobojo: 'Kobojo was a French video game developer and distribution company based in Paris. It was acquired by Celsius online in 2017.',
+                    Megazebra: 'MegaZebra is a game development company located in Munich that develops free-to-play games for social networks like Facebook and mobile devices, such as smartphones and tablets.',
                     Everreal: 'EverReal is a digital real estate rental and sales software. It simplifies the processes from marketing and selecting interested parties to handover, for better, more successful work.',
                     Timify: 'TIMIFY is a global leader in scheduling and resource management software-as-a-service (Saas). It is known for its sophisticated, secure, and customisable enterprise-focused technology.'
                 },
                 subDescriptions: {
-                    Kobojo: ["Mutants genetic gladiators","Mutants genetic gladiators","Mutants genetic gladiators","Mutants genetic gladiators","Mutants genetic gladiators", "Atlantis fantasy"]
+                    Kobojo: ["Mutants genetic gladiators","Mutants genetic gladiators","Mutants genetic gladiators","Mutants genetic gladiators","Mutants genetic gladiators", "Atlantis fantasy", "Pyramid valley", "Pyramid valley"]
+                },
+                links: {
+                    Lotsys: "https://www.fdj.fr/",
+                    Kobojo: "http://www.kobojo.com/",
+                    Megazebra: "https://www.megazebra.com/",
+                    Everreal:"https://de.everreal.co/",
+                    Timify: "https://www.timify.com/"
                 },
                 tab: 3
             }
