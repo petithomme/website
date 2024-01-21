@@ -36,12 +36,13 @@
         data() {
             return {
                 images: {
+                    Lotsys: 1,
                     Kobojo: 8,
                     Everreal: 4
                 },
                 companies: ['Lotsys','Kobojo','Megazebra', 'Everreal', 'Timify'],
                 descriptions: {
-                    Lotsys: 'Lotsys was the innovation, technology and services hub of the Group FDJ. Its mission was to provide responsive and high-performing services.',
+                    Lotsys: 'lotsys was the innovation, technology and services hub of the Group FDJ. Its mission was to provide responsive and high-performing services.',
                     Kobojo: 'Kobojo was a French video game developer and distribution company based in Paris. It was acquired by Celsius online in 2017.',
                     Megazebra: 'MegaZebra is a game development company located in Munich that develops free-to-play games for social networks like Facebook and mobile devices, such as smartphones and tablets.',
                     Everreal: 'EverReal is a digital real estate rental and sales software. It simplifies the processes from marketing and selecting interested parties to handover, for better, more successful work.',
