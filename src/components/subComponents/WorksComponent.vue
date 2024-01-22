@@ -16,9 +16,11 @@
 
 
         <p class="description">
-            <H2>Fullstack developer </H2>
-            <H5>Backend : NodeJs/ Express / Typescript - Jest - PostgreSQL</H5>
-            <H5>Frontend : React / Redux / Typescript - Jest - Storybook - Mui </H5>
+            <H2>{{ this.title }} </H2>
+            <H5 v-if="this.backend">Backend : {{ this.backend }}</H5>
+            <H5 v-if="this.frontEnd">Frontend : {{ this.frontEnd }} </H5>
+            <H5 v-if="this.cicd">CI/CD : {{ this.cicd }} </H5>
+            <H5 v-if="this.tools">Tools creation : {{ this.tools }} </H5>
         </p>
     </div>
 
@@ -37,7 +39,7 @@
             Pagination
         },
         props: [
-           "path", "description", "images", "subDescription", "link"
+           "path", "description", "images", "subDescription", "link", "title", "backend", "frontEnd", "cicd", "tools"
         ],
         methods: {
             handleSlideStart(data) {
