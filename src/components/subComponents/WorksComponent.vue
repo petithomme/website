@@ -1,7 +1,10 @@
 <template>
 
     <div>
-        <p class="description"> {{ this.description }} <a :href="this.link">{{ this.link }}</a>  </p>
+        <p class="description"> {{ this.description }}
+            <br>
+            <a :href="this.link">{{ this.link }}</a>
+        </p>
         <p class="description" v-if="subDescription">Game : {{ this.getSubdescription }} </p>
         <carousel v-bind="settings"  @slide-start="handleSlideStart">
             <slide v-for="i in this.images" :key="i">
