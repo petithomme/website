@@ -50,7 +50,7 @@
                 },
                 descriptions: {
                     Exane: 'It is a Match 3 game I did fully alone. In this game, you navigate through different maps with a pirate style design. Each layout can evolve, forced by game design, or the choice of the user.',
-                    Stories: 'It is an application I have created with a friend who is an artist. You get every day a new story for your kid created by AI. ',
+                    Stories: 'It is an application I have created with a friend who is an artist. You get every day a new story for your kids created by AI. ',
                     Q4W: 'A mod for Quake 4 to set back the quake world physics',
                     Sambo: 'A billboard created for the Sambo "Grand Prix de Paris" in 2013',
                     Misc: 'Some 3d created in school and a table set designed for "Lille 2004 European capital of culture"'
