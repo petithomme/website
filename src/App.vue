@@ -1,6 +1,6 @@
 <template>
   <div id="nav">
-    <b-link id="menu" class="link"><router-link to="/">Home</router-link></b-link>
+    <b-link id="menu" class="link"><router-link to="/"></router-link></b-link>
     <b-link class="link"><router-link to="/professionals">Professionals</router-link></b-link>
     <b-link class="link"><router-link to="/projects">Projects</router-link></b-link>
     <b-link class="link"><router-link to="/certifications">Certifications</router-link></b-link>

@@ -1,5 +1,4 @@
 import { createWebHistory, createRouter } from "vue-router";
-import IndexComponent from "@/components/IndexComponent";
 import ContactComponent from "@/components/ContactComponent";
 import CertificationsComponent from "@/components/CertificationsComponent";
 import ProjectsComponent from "@/components/ProjectsComponent";
@@ -9,7 +8,7 @@ const routes = [
     {
         path: "/",
         name: "Home",
-        component: IndexComponent,
+        component: ProfessionalsComponent,
     },
     {
         path: "/contact",
