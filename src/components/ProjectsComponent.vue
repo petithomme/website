@@ -4,7 +4,7 @@
         <div class="subMenuContainer">
             <b-button v-for="i in [0,1,2,3,4]" v-bind:key="i"
                       class="submenu"
-                      variant="outline-primary"
+                      :variant="getVariant(i)"
                       @click="clickOn(i)">
                 {{ projects[i]}}
             </b-button>
@@ -34,9 +34,11 @@
         components: {WorksComponent},
         methods: {
             clickOn(value) {
-                console.log(value)
                 this.tab = value
             },
+            getVariant(i) {
+                return i !== this.tab ? "outline-primary": "danger"
+            }
         },
         data() {
             return {
@@ -60,7 +62,6 @@
                 links: {
                     Exane: "https://play.google.com/store/apps/details?id=ttm.skill.Exane",
                     Stories: "https://play.google.com/store/apps/details?id=com.sample.stories",
-                    Misc: "http://www.lille2004.com/",
                     Sambo: "https://puc.paris/sambo"
                 },
                 tab: 1,

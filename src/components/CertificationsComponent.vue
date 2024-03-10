@@ -86,6 +86,12 @@
                         name: 'MongoDB Essentials - Understand the Basics of MongoDB',
                         url: 'https://www.udemy.com/course/mongodb-essentials/',
                         certificat: 'https://www.udemy.com/certificate/UC-PBXGJJIU/'
+                    },
+                    {
+                        image: 'docker.png',
+                        name: 'Déployer PHP, Node.js avec Nginx et grâce à Docker',
+                        url: 'https://www.udemy.com/course/deployer-php-nodejs-nginx-docker/',
+                        certificat: ''
                     }
                 ],
                 udacity: [

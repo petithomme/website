@@ -3,7 +3,7 @@
     <div>
         <p class="description"> {{ this.description }}
             <br>
-            <a :href="this.link">{{ this.path }}</a>
+            <a :href="this.link" v-if="this.link">{{ this.path }}</a>
         </p>
         <p class="description" v-if="subDescription">Game : {{ this.getSubdescription }} </p>
         <carousel v-bind="settings"  @slide-start="handleSlideStart">

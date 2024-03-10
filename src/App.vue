@@ -31,6 +31,10 @@
     margin-right: 1rem;
   }
 
+  .active {
+    margin-right: 10rem;
+  }
+
   #nav {
     margin-top: 1rem;
     margin-bottom: 1rem;
