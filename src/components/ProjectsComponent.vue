@@ -64,7 +64,7 @@
                     Stories: "https://play.google.com/store/apps/details?id=com.sample.stories",
                     Sambo: "https://puc.paris/sambo"
                 },
-                tab: 1,
+                tab: 0,
             }
         }
     }
