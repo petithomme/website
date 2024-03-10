@@ -12,7 +12,8 @@
                     alt="" class="carousel__item"/>
             </slide>
 
-            <template #addons>
+            <template #addons="{ slidesCount }">
+                <navigation v-if="slidesCount > 1"/>
                 <pagination />
             </template>
         </carousel>
@@ -32,14 +33,15 @@
 <script>
 
     import 'vue3-carousel/dist/carousel.css'
-    import { Carousel, Slide, Pagination } from 'vue3-carousel'
+    import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
     export default {
         name: "WorksComponent",
         components: {
             Carousel,
             Slide,
-            Pagination
+            Pagination,
+            Navigation
         },
         props: [
            "path", "description", "images", "subDescription", "link", "title", "backend", "frontEnd", "cicd", "tools"
