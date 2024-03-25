@@ -92,6 +92,12 @@
                         name: 'Déployer PHP, Node.js avec Nginx et grâce à Docker',
                         url: 'https://www.udemy.com/course/deployer-php-nodejs-nginx-docker/',
                         certificat: ''
+                    },
+                    {
+                        image: 'ddd.png',
+                        name: 'Qu\'est ce que le Domain Driven Design en réalité ?',
+                        url: 'https://www.udemy.com/course/quest-ce-que-le-domain-driven-design-en-realite/',
+                        certificat: ''
                     }
                 ],
                 udacity: [

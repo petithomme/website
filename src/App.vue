@@ -31,10 +31,6 @@
     margin-right: 1rem;
   }
 
-  .active {
-    margin-right: 10rem;
-  }
-
   #nav {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -82,7 +78,7 @@
     align-items: center;
     justify-content: center;
     width: 7rem;
-    border: thin solid slategrey;
+    border: thin solid red;
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;
     margin-left: 0.5rem;

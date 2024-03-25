@@ -45,8 +45,8 @@
                     Lotsys: 3,
                     Kobojo: 8,
                     Everreal: 4,
-                    Megazebra: 3,
-                    Timify: 1
+                    Megazebra: 6,
+                    Timify: 2
                 },
                 companies: ['Lotsys','Kobojo','Megazebra', 'Everreal', 'Timify'],
                 descriptions: {
@@ -58,7 +58,7 @@
                 },
                 subDescriptions: {
                     Kobojo: ["Mutants genetic gladiators","Mutants genetic gladiators","Mutants genetic gladiators","Mutants genetic gladiators","Mutants genetic gladiators", "Atlantis fantasy", "Pyramid valley", "Pyramid valley"],
-                    Megazebra: ["Mahjong trails","Solitaire castle","Solitaire castle"]
+                    Megazebra: ["Mahjong trails","Mahjong trails","Mahjong trails","Mahjong trails","Mahjong trails","Mahjong trails"]
                 },
                 links: {
                     Lotsys: "https://www.fdj.fr/",
