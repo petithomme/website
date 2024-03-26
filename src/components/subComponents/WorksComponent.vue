@@ -6,7 +6,12 @@
             <a :href="this.link" v-if="this.link">{{ this.path }}</a>
         </p>
         <p class="description" v-if="subDescription">Game : {{ this.getSubdescription }} </p>
-        <carousel v-bind="settings"  @slide-start="handleSlideStart">
+
+        <div v-if="video" class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/RNF5IofZSKE?si=TYbSeLohOdQ5K8oF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <carousel v-bind="settings" @slide-start="handleSlideStart" v-if="images > 0">
             <slide v-for="i in this.images" :key="i">
                <img :src="require(`@/assets/${this.path.toLowerCase()}/${i}.png`)"
                     alt="" class="carousel__item"/>
@@ -44,7 +49,7 @@
             Navigation
         },
         props: [
-           "path", "description", "images", "subDescription", "link", "title", "backend", "frontEnd", "cicd", "tools"
+           "path", "description", "images", "subDescription", "link", "title", "backend", "frontEnd", "cicd", "tools", "video"
         ],
         methods: {
             handleSlideStart(data) {
@@ -70,6 +75,13 @@
 </script>
 
 <style scoped>
+
+    .video {
+        margin-top: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     .description {
         width: 60%;

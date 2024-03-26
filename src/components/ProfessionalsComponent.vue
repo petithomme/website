@@ -10,19 +10,22 @@
         </div>
 
         <br>
-        <div class="displayWorks">
-            <WorksComponent
-                    :path="companies[tab]"
-                    :description="descriptions[companies[tab]]"
-                    :sub-description="subDescriptions[companies[tab]]"
-                    :images="images[companies[tab]]"
-                    :front-end="frontends[companies[tab]]"
-                    :backend="backends[companies[tab]]"
-                    :cicd="cicds[companies[tab]]"
-                    :tools="tools[companies[tab]]"
-                    :title="titles[companies[tab]]"
-                    :link="links[companies[tab]]"/>
-        </div>
+        <Transition>
+            <div class="displayWorks" v-if="show">
+                <WorksComponent
+                        :path="companies[tab]"
+                        :description="descriptions[companies[tab]]"
+                        :sub-description="subDescriptions[companies[tab]]"
+                        :images="images[companies[tab]]"
+                        :front-end="frontends[companies[tab]]"
+                        :backend="backends[companies[tab]]"
+                        :cicd="cicds[companies[tab]]"
+                        :tools="tools[companies[tab]]"
+                        :title="titles[companies[tab]]"
+                        :link="links[companies[tab]]"
+                        />
+            </div>
+        </Transition>
     </div>
 </template>
 
@@ -34,13 +37,22 @@
         methods: {
              clickOn(value) {
                 this.tab = value
+                this.show = false
+                this.showTab()
             },
             getVariant(i) {
                  return i !== this.tab ? "outline-primary": "danger"
+            },
+            showTab() {
+                setTimeout(()=> this.show = true, 300)
             }
+        },
+        mounted() {
+            this.showTab()
         },
         data() {
             return {
+                show: false,
                 images: {
                     Lotsys: 3,
                     Kobojo: 8,
@@ -92,7 +104,7 @@
                 cicds: {
                     Megazebra: "Jenkins",
                 },
-                tab: 3
+                tab: 4
             }
         }
     }

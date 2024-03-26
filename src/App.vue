@@ -1,8 +1,8 @@
 <template>
   <div id="nav">
     <b-link id="menu" class="link"><router-link to="/"></router-link></b-link>
-    <b-link class="link"><router-link to="/professionals">Professionals</router-link></b-link>
-    <b-link class="link"><router-link to="/projects">Projects</router-link></b-link>
+    <b-link class="link"><router-link to="/professionals">Professional</router-link></b-link>
+    <b-link class="link"><router-link to="/projects">Personal</router-link></b-link>
     <b-link class="link"><router-link to="/certifications">Certifications</router-link></b-link>
     <b-link class="link"><router-link to="/contact">Contact</router-link></b-link>
   </div>
@@ -91,4 +91,17 @@
     margin-left: auto;
     margin-right: auto;
   }
+
+  .v-enter-active,
+  .v-leave-active {
+    transition: all 0.3s ease-out;
+  }
+
+  .v-enter-from,
+  .v-leave-to {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+
 </style>

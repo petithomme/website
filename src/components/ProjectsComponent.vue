@@ -12,15 +12,18 @@
 
         <br>
 
+        <Transition>
+            <div class="displayWorks" v-if="show">
+                <WorksComponent
+                        :path="projects[tab]"
+                        :description="descriptions[projects[tab]]"
+                        :sub-description="subDescriptions[projects[tab]]"
+                        :images="images[projects[tab]]"
+                        :link="links[projects[tab]]"
+                        :video="videos[projects[tab]]"/>
+            </div>
+        </Transition>
 
-        <div class="displayWorks">
-            <WorksComponent
-                    :path="projects[tab]"
-                    :description="descriptions[projects[tab]]"
-                    :sub-description="subDescriptions[projects[tab]]"
-                    :images="images[projects[tab]]"
-                    :link="links[projects[tab]]"/>
-        </div>
 
     </div>
 
@@ -35,16 +38,28 @@
         methods: {
             clickOn(value) {
                 this.tab = value
+                this.show = false
+                this.showTab()
             },
             getVariant(i) {
                 return i !== this.tab ? "outline-primary": "danger"
+            },
+            showTab() {
+                setTimeout(()=> this.show = true, 300)
             }
+        },
+        mounted() {
+            this.showTab()
         },
         data() {
             return {
+                show: false,
                 projects: ['Exane','Stories','Q4W', 'Sambo', 'Misc'],
+                videos: {
+                    Exane: 'https://youtu.be/RNF5IofZSKE',
+                },
                 images: {
-                    Exane: 3,
+                    Exane: 0,
                     Stories: 5,
                     Q4W: 3,
                     Sambo: 1,
