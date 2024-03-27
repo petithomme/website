@@ -49,6 +49,14 @@
     color: slategrey;
   }
 
+  a.router-link-active {
+    color: red;
+  }
+
+  a.router-link-exact-active {
+    color: red;
+  }
+
   #menu {
     margin-left: auto;
   }

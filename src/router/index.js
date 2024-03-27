@@ -7,8 +7,8 @@ import ProfessionalsComponent from "@/components/ProfessionalsComponent";
 const routes = [
     {
         path: "/",
-        name: "Home",
-        component: ContactComponent,
+        redirect: { path: "/professionals" },
+        name: "Home"
     },
     {
         path: "/contact",
