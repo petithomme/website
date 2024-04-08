@@ -44,11 +44,6 @@
         name: "DegreesComponent",
         components: {CertificationComponent},
         props: ["udemy", "udacity", "professionals", "eduonix", "coursera", "edx", "blockchain"],
-        data() {
-            return {
-
-            }
-        }
     }
 </script>
 
